@@ -16,7 +16,7 @@ but for now, let's refactor our playbook to use roles.
 Roles add a bit of "magic" to Ansible: they assume a specific file
 organization. While there is a suggested layout regarding roles, you can
 organize things the way you want using includes. However, role's conventions
-help building modular playbooks, and housekeeping will be much simpler.
+help to build modular playbooks, and housekeeping will be much simpler.
 Rubyists would call this "convention over configuration".
 
 The file layout for roles looks like this:
@@ -82,7 +82,7 @@ exposing too much about my servers. But that's just a personal
 preference. Ansible just lets you do it the way you want.
 
 But you have some vars that you hardly want to change. For instance, if
-you have a role for nginx that pulls the .deb package from a PPA, you
+you have a role for NGINX that pulls the .deb package from a PPA, you
 might want to add the PPA address in `vars/main.yml`. It is something
 that you _can_ configure, but that will be mostly static 99% of the
 time. Using `vars` will let you pull out this information out of your

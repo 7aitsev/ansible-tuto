@@ -31,7 +31,7 @@ Cool!
 ### Copy module
 
 No surprise, with this module you can copy a file from the controlling machine
-to the node. Lets say we want to copy our `/etc/hosts` to `/tmp` of our target
+to the node. Let's say we want to copy our `/etc/hosts` to `/tmp` of our target
 node:
 
 ```bash
@@ -89,7 +89,7 @@ return:
 ## Many more facts
 
 That was easy. However, It would quickly become cumbersome if we
-wanted more information (ip addresses, RAM size, etc...). The solution
+wanted more information (IP addresses, RAM size, etc...). The solution
 comes from another really handy module (weirdly) called `setup`: it
 specializes in node's _facts_ gathering.
 
@@ -148,7 +148,7 @@ host0 | success >> {
 }
 ```
 
-Notice that hosts replied in different order compared to the previous output.
+Notice that hosts replied a in different order compared to the previous output.
 This is because ansible parallelizes communications with hosts!
 
 BTW, when using the setup module, you can use `*` in the `filter=` expression.

@@ -16,7 +16,7 @@ We assume we have the following inventory file (let's name it `hosts`):
 host1
 ```
 
-and all hosts are debian-like.
+and all hosts are Debian-like.
 
 Note: remember you can (and in our exercise we do) use `ansible_host` to set
 the real IP of the host. You can also change the inventory and use a real
@@ -24,7 +24,7 @@ hostname. In any case, use a non-critical machine to play with! In the real
 hosts file, we also have `ansible_user=root` to cope with potential different
 ansible default configurations.
 
-Lets build a playbook that will install apache on machines in the `web` group.
+Let's build a playbook that will install apache on machines in the `web` group.
 
 ```yaml
 - hosts: web
@@ -38,14 +38,14 @@ Lets build a playbook that will install apache on machines in the `web` group.
 
 We just need to say what we want to do using the right ansible modules. Here,
 we're using the [apt](http://docs.ansible.com/apt_module.html) module that can
-install debian packages. We also ask this module to update the package cache.
+install Debian packages. We also ask this module to update the package cache.
 
 We also added a name for this task. While this is not necessary, it's very
 informative when the playbook runs, so it's highly recommended.
 
 All in all, this was quite easy!
 
-You can run the playbook (lets call it `apache.yml`):
+You can run the playbook (let's call it `apache.yml`):
 
 ```bash
 ansible-playbook -i step-04/hosts -l host1 step-04/apache.yml

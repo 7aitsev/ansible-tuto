@@ -1,7 +1,7 @@
 # Ansible tutorial: Using tags
 
 We are starting to have real fun now. With a press of a button, we can
-deploy our loadbalancer and web app. This is awesome !
+deploy our loadbalancer and web app. This is awesome!
 
 However, as our playbooks grow, having to go through all the tasks every
 time is a waste of time. Enter tags.
@@ -11,7 +11,7 @@ time is a waste of time. Enter tags.
 Tags will let you select which part of the playbook you want to run. For
 instance, if you change your HAproxy configuration, you don't really
 need to run the Apache playbook. By using tags, you can tell Ansible
-"Hey, just run the tasks taggued with HAproxy". You can even negate
+"Hey, just run the tasks tagged with HAproxy". You can even negate
 tags, asking "Hey Ansible, run all tasks but HAproxy ones".
 
 You can also ask things like "run tasks tagged A or B, but not C".
@@ -23,7 +23,7 @@ tags. Example:
 
 ```yaml
 - name: Do something really interesting
-  debug: msg="Yes this does something really interesting"
+  debug: msg="Yes, this does something really interesting"
   tags:
     - interesting
     - awesome
@@ -33,7 +33,7 @@ An alternate Yaml syntax is :
 
 ```yaml
 - name: Do something really interesting
-  debug: msg="Yes this does something really interesting"
+  debug: msg="Yes, this does something really interesting"
   tags: ['interesting', 'awesome']
 ```
 
@@ -49,8 +49,8 @@ The previous task will be executed when:
 - no tags are provided at the command line
 - `-t interesting` is provided
 - `-t awesome` is provided
-- or when multiple tags are provided `-t boring,interesting` -or by repeating
-  `-t` like in `-t boring -t interesting`)
+- multiple tags are provided `-t awesome,interesting` or by repeating
+  `-t` (like in `-t awesome -t interesting`)
 
 ## Hands on
 
@@ -125,7 +125,7 @@ Not really hard. Lets apply this to our apache roles.
     - restart apache
 ```
 
-Well not hard, but insanely boring !
+Well not hard, but insanely boring!
 You probably noticed that I already slipped in a tag in the previous
 chapters (`deploy`). Now we added the `apache` tag too.
 

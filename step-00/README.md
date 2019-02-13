@@ -44,7 +44,7 @@ To follow this tutorial, you'll need to have your keys in VMs root's
 `authorized_keys`. While this is not absolutely necessary (Ansible can use
 sudo, password authentication, etc...), it will make things way easier.
 
-Ansible is perfect for this and we will use it for the job. However I won't
+Ansible is perfect for this and we will use it for the job. However, I won't
 explain what's happening for now. Just trust me.
 
 ```bash
@@ -64,7 +64,7 @@ then you probably already have SSH host keys for those IPs in your
 `~/.ssh/known_hosts`. You can remove them with `ssh-keygen -R
 <IP_ADDRESS>`.
 
-Otherwise, juste type `yes` when prompted to access ssh host keys if
+Otherwise, just type `yes` when prompted to access ssh host keys if
 requested.
 
 To polish things up, it's better to have an ssh-agent running, and add your

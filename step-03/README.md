@@ -18,7 +18,7 @@ host[0:2]
 ```
 
 If you wish to use child groups, just define a `[groupname:children]` and add
-child groups in it. For instance, let's say we have various flavors of linux
+child groups in it. For instance, let's say we have various flavors of Linux
 running, we could organize our inventory like this:
 
 ```ini
@@ -75,7 +75,7 @@ mentioned inventory file, `host0` variables will be searched in those files:
 It doesn't matter if those files do not exist, but if they do, ansible will
 use them.
 
-Now that we know the basics of modules, inventories and variables, let's
+Now that we know the basics of modules, inventories, and variables, let's
 explore the real power of Ansible with playbooks.
 
 Head to [step-04](https://github.com/leucos/ansible-tuto/tree/master/step-04).
