@@ -59,7 +59,7 @@ TASK: [Rolling back - Restoring old default virtualhost] *********************
 skipping: [host1]
 skipping: [host2]
 
-TASK: [Rolling back - Removing out virtualhost] *********************
+TASK: [Rolling back - Removing our virtualhost] *********************
 skipping: [host1]
 skipping: [host2]
 

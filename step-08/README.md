@@ -70,7 +70,7 @@ series of items, and use each item in an action like this:
       command: a2ensite default
       when: result is failed
 
-    - name: Rolling back - Removing out virtualhost
+    - name: Rolling back - Removing our virtualhost
       command: a2dissite awesome-app
       when: result is failed
 
@@ -128,7 +128,7 @@ changed: [host1]
 TASK: [Rolling back - Restoring old default virtualhost] *********************
 skipping: [host1]
 
-TASK: [Rolling back - Removing out virtualhost] *********************
+TASK: [Rolling back - Removing our virtualhost] *********************
 skipping: [host1]
 
 TASK: [Rolling back - Ending playbook] *********************
