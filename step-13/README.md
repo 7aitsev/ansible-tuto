@@ -9,10 +9,10 @@ time is a waste of time. Enter tags.
 ## Leveraging tags
 
 Tags will let you select which part of the playbook you want to run. For
-instance, if you change your HAproxy configuration, you don't really
+instance, if you change your HAProxy configuration, you don't really
 need to run the Apache playbook. By using tags, you can tell Ansible
-"Hey, just run the tasks taggued with HAproxy". You can even negate
-tags, asking "Hey Ansible, run all tasks but HAproxy ones".
+"Hey, just run the tasks taggued with HAProxy". You can even negate
+tags, asking "Hey Ansible, run all tasks but HAProxy ones".
 
 You can also ask things like "run tasks tagged A or B, but not C".
 

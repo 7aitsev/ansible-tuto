@@ -20,15 +20,15 @@ We'll use variables to configure all these parameters.
 
 ## Group vars
 
-The check interval will be set in a group_vars file for haproxy. This will
-ensure all haproxies will inherit from it.
+The check interval will be set in a group_vars file for HAProxy. This will
+ensure all HAProxies will inherit from it.
 
 We just need to create the file `group_vars/haproxy.yml` below the inventory
 directory. The file has to be named after the group you want to define the
 variables for. If we wanted to define variables for the web group, the file
 would be named `group_vars/web.yml`.
 
-Note that the `.yml` is optionalm: we could name haproxy group vars file
+Note that the `.yml` is optionalm: we could name HAProxy group vars file
 `group_vars/haproxy` and Ansible would be ok with it. The extension just helps
 editors picking the right syntax highlighter.
 
@@ -117,7 +117,7 @@ ansible-playbook -i step-11/hosts step-11/haproxy.yml
 
 Note that, while we could, it's not necessary to run the apache playbook since
 nothing changed, but we had to cheat a bit for that. Here is the updated
-haproxy playbook:
+HAProxy playbook:
 
 ```yaml
 - hosts: web
@@ -158,7 +158,7 @@ haproxy playbook:
 
 See? We added an empty play for web hosts at the top. It does nothing except
 `gather_facts: true`. But it's here because it will trigger facts gathering on
-hosts in group `web`.  This is required because the haproxy playbook needs to
+hosts in group `web`.  This is required because the HAProxy playbook needs to
 pick facts from hosts in this group. If we don't do this, Ansible will complain
 saying that `ansible_all_ipv4_addresses` key doesn't exist.
 

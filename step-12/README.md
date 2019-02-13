@@ -196,14 +196,14 @@ site-wide configuration in it. While we're at it, we'll include
 
 That wasn't too hard.
 
-Now let's create the haproxy role:
+Now let's create the HAProxy role:
 
 ```bash
 mkdir -p step-12/roles/haproxy/{tasks,handlers,templates}
 cp step-11/templates/haproxy.cfg.j2 step-12/roles/haproxy/templates/
 ```
 
-Instead of creating the haproxy role directory structure using mkdir, it's
+Instead of creating the HAProxy role directory structure using mkdir, it's
 possible to use ansible-galaxy:
 
 ```bash

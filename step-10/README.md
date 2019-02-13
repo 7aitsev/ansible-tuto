@@ -2,7 +2,7 @@
 
 We'll use the `haproxy` as loadbalancer. Of course, install is just like we did
 for apache. But now configuration is a bit more tricky since we need to list
-all web servers in haproxy's configuration. How can we do that?
+all web servers in HAProxy's configuration. How can we do that?
 
 ## HAProxy configuration template
 
@@ -66,7 +66,7 @@ boils down to adding or removing hosts from the `[web]` group.
 ## HAProxy playbook
 
 We've done the most difficult part of the job. Writing a playbook to install
-and configure HAproxy is a breeze:
+and configure HAProxy is a breeze:
 
 ```yaml
 - hosts: web
@@ -112,7 +112,7 @@ group `haproxy`.
 And now... let's try this out. Since our inventory contains only hosts
 necessary for the cluster, we don't need to limit the host list and can even
 run both playbooks. Well, to tell the truth, we must run both of them at the
-same time, since the haproxy playbook requires facts _from_ the two webservers.
+same time, since the HAProxy playbook requires facts _from_ the two webservers.
 In step-11 we'll show how to avoid this.
 
 ```bash
