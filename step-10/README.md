@@ -14,7 +14,7 @@ For instance, if you want to output the inventory_name of the host the template
 is currently built for, you just can write `{{ inventory_hostname }}` in the
 Jinja template.
 
-Or if you need the IP of the first ethernet interface (which ansible knows
+Or if you need the IP of the first ethernet interface (which Ansible knows
 thanks to the `setup` module), you just write: `{{
 ansible_default_ipv4.address}}` (which is equivalent to `{{
 ansible_default_ipv4['address'] }}`). in your template.

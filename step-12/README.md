@@ -100,7 +100,7 @@ The `meta` directory is where you can add dependencies, and it's really
 a neat feature. We'll see that later.
 
 Note that roles sit in the `roles` directory, which is also cool since
-it will reduce top level ansible playbook clutter. But you can configure
+it will reduce top level Ansible playbook clutter. But you can configure
 Ansible to use an alternate directory to store role (see [`roles_path`
 variable in `ansible.cfg`](http://docs.ansible.com/intro_configuration.html#roles-path)).
 This way you can setup a 'central place ' for all your roles, and use

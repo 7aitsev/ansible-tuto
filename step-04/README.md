@@ -1,6 +1,6 @@
 # Ansible tutorial: Ansible playbooks
 
-Playbook concept is very simple: it's just a series of ansible commands
+Playbook concept is very simple: it's just a series of Ansible commands
 (tasks), like the ones we used with the `ansible` CLI tool. These tasks are
 targeted at a specific set of hosts/groups.
 
@@ -22,7 +22,7 @@ Note: remember you can (and in our exercise we do) use `ansible_host` to set
 the real IP of the host. You can also change the inventory and use a real
 hostname. In any case, use a non-critical machine to play with! In the real
 hosts file, we also have `ansible_user=root` to cope with potential different
-ansible default configurations.
+Ansible default configurations.
 
 Lets build a playbook that will install apache on machines in the `web` group.
 
@@ -36,7 +36,7 @@ Lets build a playbook that will install apache on machines in the `web` group.
         update_cache: true
 ```
 
-We just need to say what we want to do using the right ansible modules. Here,
+We just need to say what we want to do using the right Ansible modules. Here,
 we're using the [apt](http://docs.ansible.com/apt_module.html) module that can
 install debian packages. We also ask this module to update the package cache.
 
@@ -79,7 +79,7 @@ PLAY [web] *********************
 ```
 
 Ansible tells us it's running the play on hosts `web`. A play is a suite of
-ansible instructions related to a host. If we'd have another `- hosts: blah`
+Ansible instructions related to a host. If we'd have another `- hosts: blah`
 line in our playbook, it would show up too (but after the first play has
 completed).
 
@@ -88,7 +88,7 @@ GATHERING FACTS *********************
 ok: [host1]
 ```
 
-Remember when we used the `setup` module? Before each play, ansible runs it on
+Remember when we used the `setup` module? Before each play, Ansible runs it on
 necessary hosts to gather facts. If this is not required because you don't need
 any info from the host, you can just add `gather_facts: no` below the host
 entry (same level as `tasks:`).
@@ -106,7 +106,7 @@ PLAY RECAP *********************
 host1              : ok=2    changed=1    unreachable=0    failed=0
 ```
 
-Finally, ansible outputs a recap of what happened: two tasks have been run and
+Finally, Ansible outputs a recap of what happened: two tasks have been run and
 one of them changed something on the host (our apache task, setup module
 doesn't change anything).
 
@@ -128,10 +128,10 @@ host1              : ok=2    changed=0    unreachable=0    failed=0
 ```
 
 Now 'changed' is '0'. This is absolutely normal and is one of the core features
-of ansible: the playbook will act only if there is something to do. It's called
+of Ansible: the playbook will act only if there is something to do. It's called
 _idempotency_ and means that you can run your playbook as many times as you
 want, you will always end up in the same state (well, unless you do crazy
-things with the `shell` module of course, but this is beyond ansible's
+things with the `shell` module of course, but this is beyond Ansible's
 control).
 
 ## Refining things

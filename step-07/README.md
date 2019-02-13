@@ -5,7 +5,7 @@ But we want to revert things to a stable state if something goes wrong.
 
 ## Reverting when things go wrong
 
-A word of warning: there's no magic here. The previous error was not ansible's
+A word of warning: there's no magic here. The previous error was not Ansible's
 fault. It's not a backup system, and it can't rollback all things. It's your
 job to make sure your playbooks are safe. Ansible just doesn't know how to
 revert the effects of `a2ensite awesome-app`.

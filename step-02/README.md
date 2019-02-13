@@ -1,13 +1,13 @@
 # Ansible tutorial: Talking to nodes
 
 Now we're good to go. Let's play with the command we saw in the previous
-chapter: `ansible`. This command is the first one of three that ansible
+chapter: `ansible`. This command is the first one of three that Ansible
 provides which interact with nodes.
 
 ## Doing something useful
 
 In the previous command, `-m ping` means "use module _ping_". This module is
-one of many available with ansible. `ping` module is really simple, it doesn't
+one of many available with Ansible. `ping` module is really simple, it doesn't
 need any arguments. Modules that take arguments pass them via `-a` switch.
 Let's see a few other modules.
 
@@ -149,14 +149,14 @@ host0 | success >> {
 ```
 
 Notice that hosts replied in different order compared to the previous output.
-This is because ansible parallelizes communications with hosts!
+This is because Ansible parallelizes communications with hosts!
 
 BTW, when using the setup module, you can use `*` in the `filter=` expression.
 It will act like a shell glob.
 
 ## Selecting hosts
 
-We saw that `all` means 'all hosts', but ansible provides a [lot of other ways
+We saw that `all` means 'all hosts', but Ansible provides a [lot of other ways
 to select hosts](http://docs.ansible.com/intro_patterns.html):
 
 - `host0:host1` would run on host0 and

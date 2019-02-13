@@ -71,10 +71,10 @@ To polish things up, it's better to have an ssh-agent running, and add your
 keys to it (`ssh-add`).
 
 **NOTE:** We are assuming that you're using Ansible version v2.5+ on your local
-machine. If not you should upgrade ansible to v2.5+ before using this
+machine. If not you should upgrade Ansible to v2.5+ before using this
 repository (or run under virtualenv).
 
-To check your ansible version use the command `ansible --version`. The output
+To check your Ansible version use the command `ansible --version`. The output
 should be similar to the above:
 
 ```none

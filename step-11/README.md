@@ -49,7 +49,7 @@ haproxy:
 
 This is just a matter of taste. Complex vars can help group stuff logically.
 They can also, under some circumstances, merge subsequently defined keys (note
-however that this is not the default ansible behaviour). For now we'll just use
+however that this is not the default Ansible behaviour). For now we'll just use
 simple variables.
 
 ## Hosts vars
@@ -159,7 +159,7 @@ haproxy playbook:
 See? We added an empty play for web hosts at the top. It does nothing except
 `gather_facts: true`. But it's here because it will trigger facts gathering on
 hosts in group `web`.  This is required because the haproxy playbook needs to
-pick facts from hosts in this group. If we don't do this, ansible will complain
+pick facts from hosts in this group. If we don't do this, Ansible will complain
 saying that `ansible_all_ipv4_addresses` key doesn't exist.
 
 Note that we already did that in the previous step, but we did not mention it.
