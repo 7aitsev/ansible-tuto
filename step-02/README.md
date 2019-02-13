@@ -31,7 +31,7 @@ Cool!
 ### Copy module
 
 No surprise, with this module you can copy a file from the controlling machine
-to the node. Lets say we want to copy our `/etc/hosts` to `/tmp` of our target
+to the node. Let's say we want to copy our `/etc/hosts` to `/tmp` of our target
 node:
 
 ```bash
@@ -69,7 +69,7 @@ JSON).
 Ok, the above stuff is fun, but we have many nodes to manage. Let's try that on
 other hosts too.
 
-Lets say we want to get some facts about the node, and, for instance,
+Let's say we want to get some facts about the node, and, for instance,
 know which Ubuntu version we have deployed on nodes, it's pretty easy:
 
     ansible -i step-02/hosts -m shell -a 'grep DISTRIB_RELEASE /etc/lsb-release' all

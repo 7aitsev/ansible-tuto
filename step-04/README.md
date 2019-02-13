@@ -24,7 +24,7 @@ hostname. In any case, use a non-critical machine to play with! In the real
 hosts file, we also have `ansible_user=root` to cope with potential different
 Ansible default configurations.
 
-Lets build a playbook that will install apache on machines in the `web` group.
+Let's build a playbook that will install apache on machines in the `web` group.
 
 ```yaml
 - hosts: web
@@ -45,7 +45,7 @@ informative when the playbook runs, so it's highly recommended.
 
 All in all, this was quite easy!
 
-You can run the playbook (lets call it `apache.yml`):
+You can run the playbook (let's call it `apache.yml`):
 
 ```bash
 ansible-playbook -i step-04/hosts -l host1 step-04/apache.yml
@@ -138,7 +138,7 @@ control).
 
 Sure our playbook can install apache server, but it could be a bit more
 complete. It could add a virtualhost, ensure apache is restarted. It could
-even deploy our web site from a git repository. Lets "[make it so][]"
+even deploy our web site from a git repository. Let's "[make it so][]"
 
 Head to next step in
 [step-05](https://github.com/leucos/ansible-tuto/tree/master/step-05).

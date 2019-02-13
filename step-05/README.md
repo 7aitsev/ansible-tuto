@@ -1,6 +1,6 @@
 # Ansible tutorial: Refining apache setup
 
-We've installed apache, now lets set up our virtualhost.
+We've installed apache, now let's set up our virtualhost.
 
 ## Refining the playbook
 
@@ -105,5 +105,5 @@ Pretty cool! Well, thinking about it, we're getting ahead of ourselves here.
 Shouldn't we check that the config is ok before restarting apache? This way we
 won't end up interrupting the service if our configuration file is incorrect.
 
-Lets do that in
+Let's do that in
 [step-06](https://github.com/leucos/ansible-tuto/tree/master/step-06).
