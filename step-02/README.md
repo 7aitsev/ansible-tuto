@@ -148,7 +148,7 @@ host0 | success >> {
 }
 ```
 
-Notice that hosts replied a in different order compared to the previous output.
+Notice that hosts replied in a different order compared to the previous output.
 This is because ansible parallelizes communications with hosts!
 
 BTW, when using the setup module, you can use `*` in the `filter=` expression.
