@@ -24,7 +24,7 @@ hostname. In any case, use a non-critical machine to play with! In the real
 hosts file, we also have `ansible_user=root` to cope with potential different
 Ansible default configurations.
 
-Let's build a playbook that will install apache on machines in the `web` group.
+Let's build a playbook that will install Apache on machines in the `web` group.
 
 ```yaml
 - hosts: web
@@ -107,7 +107,7 @@ host1              : ok=2    changed=1    unreachable=0    failed=0
 ```
 
 Finally, Ansible outputs a recap of what happened: two tasks have been run and
-one of them changed something on the host (our apache task, setup module
+one of them changed something on the host (our Apache task, setup module
 doesn't change anything).
 
 Now let's try to run it again and see what happens:
@@ -136,8 +136,8 @@ control).
 
 ## Refining things
 
-Sure our playbook can install apache server, but it could be a bit more
-complete. It could add a virtualhost, ensure apache is restarted. It could
+Sure our playbook can install Apache server, but it could be a bit more
+complete. It could add a virtualhost, ensure Apache is restarted. It could
 even deploy our web site from a git repository. Let's "[make it so][]"
 
 Head to next step in

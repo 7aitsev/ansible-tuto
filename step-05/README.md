@@ -1,13 +1,13 @@
-# Ansible tutorial: Refining apache setup
+# Ansible tutorial: Refining Apache setup
 
-We've installed apache, now let's set up our virtualhost.
+We've installed Apache, now let's set up our virtualhost.
 
 ## Refining the playbook
 
 We need just one virtualhost on our server, but we want to replace the default
 one with something more specific. So we'll have to remove the current
 (presumably `default`) virtualhost, send our virtualhost, activate it and
-restart apache.
+restart Apache.
 
 Let's create a directory called `files`, and add our virtualhost configuration
 for host1, which we'll call `awesome-app`:
@@ -23,7 +23,7 @@ for host1, which we'll call `awesome-app`:
 </VirtualHost>
 ```
 
-Now, a quick update to our apache playbook and we're set:
+Now, a quick update to our 'apache.yml' playbook and we're set:
 
 ```yaml
 - hosts: web
@@ -102,7 +102,7 @@ host1              : ok=7    changed=5    unreachable=0    failed=0
 ```
 
 Pretty cool! Well, thinking about it, we're getting ahead of ourselves here.
-Shouldn't we check that the config is ok before restarting apache? This way we
+Shouldn't we check that the config is ok before restarting Apache? This way we
 won't end up interrupting the service if our configuration file is incorrect.
 
 Let's do that in

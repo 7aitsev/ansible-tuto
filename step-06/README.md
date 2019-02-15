@@ -1,6 +1,6 @@
 # Ansible tutorial: Restarting when config is correct
 
-We've installed apache, pushed our virtualhost and restarted the server. But
+We've installed Apache, pushed our virtualhost and restarted the server. But
 what if we wanted the playbook to restart the server only if the config is
 correct? Let's do that.
 
@@ -26,7 +26,7 @@ Let's change our `awesome-app` virtual host configuration file and break it:
 As said, when a task fails, processing stops. So we'll ensure that the
 configuration is valid before restarting the server. We also start by adding
 our  virtualhost _before_ removing the default virtualhost, so a subsequent
-restart (possibly done directly on the server) won't break apache.
+restart (possibly done directly on the server) won't break Apache.
 
 Note that we should have done this in the first place. Since we ran our
 playbook already, the default virtualhost is already deactivated. Nevermind:
@@ -104,7 +104,7 @@ As you can see since `apache2ctl` returns with an exit code of 1 when it fails,
 Ansible is aware of it and stops processing. Great!
 
 Mmmh, not so great in fact... Our virtual host has been added anyway. Any
-subsequent apache restart will complain about our config and bail out. So we
+subsequent Apache restart will complain about our config and bail out. So we
 need a way to catch failures and revert back.
 
 Let's do that in

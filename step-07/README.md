@@ -1,6 +1,6 @@
 # Ansible tutorial: Using conditionals
 
-We've installed apache, pushed our virtualhost and restarted the server.
+We've installed Apache, pushed our virtualhost and restarted the server.
 But we want to revert things to a stable state if something goes wrong.
 
 ## Reverting when things go wrong
@@ -114,7 +114,7 @@ PLAY RECAP *********************
 host1              : ok=7    changed=4    unreachable=0    failed=1
 ```
 
-Seemed to work as expected. Let's try to restart apache to see if it really worked:
+Seemed to work as expected. Let's try to restart Apache to see if it really worked:
 
 ```bash
 ansible -i step-07/hosts -m service -a 'name=apache2 state=restarted' host1
@@ -128,10 +128,10 @@ host1 | success >> {
 }
 ```
 
-Ok, now our apache is safe from misconfiguration here.
+Ok, now our Apache is safe from misconfiguration here.
 
 While this sounds like a lot of work, it isn't. Remember you can use variables
-almost  everywhere, so it's easy to make this a general playbook for apache,
+almost  everywhere, so it's easy to make this a general playbook for Apache,
 and use it everywhere to deploy your virtualhosts. Write it once, use it
 everywhere. We'll do that in step 9 but for now, let's deploy our web site
 using git in

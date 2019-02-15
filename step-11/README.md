@@ -115,7 +115,7 @@ Let's go:
 ansible-playbook -i step-11/hosts step-11/haproxy.yml
 ```
 
-Note that, while we could, it's not necessary to run the apache playbook since
+Note that, while we could, it's not necessary to run the Apache playbook since
 nothing changed, but we had to cheat a bit for that. Here is the updated
 HAProxy playbook:
 

@@ -54,7 +54,7 @@ The previous task will be executed when:
 
 ## Hands on
 
-Not really hard. Let's apply this to our apache roles.
+Not really hard. Let's apply this to our Apache roles.
 
 ```yaml
 - name: Installs necessary packages

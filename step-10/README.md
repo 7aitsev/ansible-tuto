@@ -1,7 +1,7 @@
 # Ansible tutorial: templates
 
 We'll use the `haproxy` as loadbalancer. Of course, install is just like we did
-for apache. But now configuration is a bit more tricky since we need to list
+for Apache. But now configuration is a bit more tricky since we need to list
 all web servers in HAProxy's configuration. How can we do that?
 
 ## HAProxy configuration template
